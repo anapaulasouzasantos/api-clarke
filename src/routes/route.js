@@ -1,9 +1,10 @@
 const express = require('express');
-const { getSuppliers } = require('../controllers/suppliers');
+const { getSuppliers, teste } = require('../controllers/suppliers');
 
 const route = express();
 
 route.put('/fornecedores', getSuppliers);
+route.get('/', teste)
 
 module.exports = {
     route

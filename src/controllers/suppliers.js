@@ -3,13 +3,14 @@ require('dotenv').config();
 
 const getSuppliers = async (req, res) => {
     const { consumption } = req.body;
-
-    if (!consumption) {
-        return res.status(400).json({ "mensagem": "Informe o valor do consumo." })
-    }
+    console.log(req.body);
 
     if (consumption <= 0) {
         return res.status(400).json({ "mensagem": "O valor do consumo é inválido." })
+    }
+
+    if (!consumption) {
+        return res.status(400).json({ "mensagem": "Informe o valor do consumo." })
     }
 
     try {
@@ -20,6 +21,11 @@ const getSuppliers = async (req, res) => {
     }
 }
 
+const teste = async (req, res) => {
+    console.log('ola mundo')
+}
+
 module.exports = {
-    getSuppliers
+    getSuppliers,
+    teste
 }
