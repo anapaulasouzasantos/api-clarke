@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "API-CLARKE",
+    "name": "api-clarke",
     "builds": [
         {
             "src": "src/index.js",
