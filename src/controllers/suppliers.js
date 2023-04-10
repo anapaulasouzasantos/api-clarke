@@ -2,10 +2,9 @@ const knex = require('../services/connection');
 require('dotenv').config();
 
 const getSuppliers = async (req, res) => {
-    const { consumption } = req.body;
-    console.log(req.body);
+    const { consumption } = req.query;
 
-    if (consumption <= 0) {
+    if (consumption = 0) {
         return res.status(400).json({ "mensagem": "O valor do consumo é inválido." })
     }
 
@@ -21,11 +20,6 @@ const getSuppliers = async (req, res) => {
     }
 }
 
-const teste = async (req, res) => {
-    console.log('ola mundo')
-}
-
 module.exports = {
-    getSuppliers,
-    teste
+    getSuppliers
 }
